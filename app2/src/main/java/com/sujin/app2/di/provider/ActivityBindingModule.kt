@@ -1,10 +1,9 @@
 package com.sujin.app2.di.provider
 
-import com.sujin.posts.di.provider.PostsActivityBindingModule
+import com.sujin.comments.di.provider.CommentsActivityBindingModule
 import dagger.Module
-import dagger.android.ContributesAndroidInjector
 
-@Module(includes = [PostsActivityBindingModule::class])
+@Module(includes = [CommentsActivityBindingModule::class])
 abstract class ActivityBindingModule {
 
     // Sample

@@ -8,13 +8,13 @@ import dagger.Provides
 class PostsModule {
 
     @Provides
-    @PerActivity
+    //@PerActivity
     fun providePostsView(activity: PostsActivity): PostsContract.View {
         return activity
     }
 
     @Provides
-    @PerActivity
+    //@PerActivity
     fun providePostsPresenter(view: PostsContract.View): PostsContract.Presenter {
         return PostsPresenter(view)
     }
