@@ -2,6 +2,7 @@ package com.sujin.modularfirst.di.module
 
 import android.app.Application
 import android.content.Context
+import com.sujin.posts.di.module.PostApplicationModule
 import dagger.Module
 import dagger.Provides
 import com.sujin.posts.di.scope.PerApplication
@@ -9,13 +10,13 @@ import com.sujin.posts.di.scope.PerApplication
 @Module(
     includes = [
         // ApiModule::class  *Sample. include other modules*
+        PostApplicationModule::class
     ]
 )
 open class ApplicationModule {
 
-    @Provides
-    @PerApplication
-    fun provideContext(application: Application): Context = application
+   /* @Provides
+    fun provideContext(application: Application): Context = application*/
 
     // Generate this after creating SchedulersFactory, SharedPreferenceManager and DatabaseManager
     /*@Provides
