@@ -1,4 +1,4 @@
-package com.sujin.modularfirst.di.scope
+package com.sujin.posts.di.scope
 
 import javax.inject.Scope
 

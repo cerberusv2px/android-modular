@@ -2,7 +2,6 @@ package com.sujin.modularfirst
 
 import android.app.Activity
 import android.app.Application
-import com.sujin.modularfirst.di.component.DaggerApplicationComponent
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector

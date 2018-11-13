@@ -1,4 +1,4 @@
-package com.sujin.posts.ui
+package com.sujin.posts.ui.posts
 
 interface PostsContract {
 

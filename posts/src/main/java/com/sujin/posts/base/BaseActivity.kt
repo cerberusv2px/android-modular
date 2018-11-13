@@ -1,4 +1,4 @@
-package com.sujin.modularfirst.base
+package com.sujin.posts.base
 
 import android.app.Application
 import android.databinding.DataBindingUtil

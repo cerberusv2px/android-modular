@@ -1,4 +1,4 @@
-package com.sujin.posts.ui
+package com.sujin.posts.ui.posts
 
 import javax.inject.Inject
 

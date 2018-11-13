@@ -1,4 +1,4 @@
-package com.sujin.modularfirst.base
+package com.sujin.posts.base
 
 
 import android.databinding.DataBindingUtil
@@ -6,6 +6,7 @@ import android.databinding.ViewDataBinding
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import com.sujin.comments.base.BaseViewHolder
 
 /**
  * Recyclerview adapter using paging arch component

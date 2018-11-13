@@ -1,15 +1,16 @@
-package com.sujin.posts.ui
+package com.sujin.posts.ui.posts
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import com.sujin.comments.CommentsActivity
-import com.sujin.modularfirst.base.BaseActivity
+import com.sujin.comments.ui.CommentsActivity
+import com.sujin.comments.base.BaseActivity
 import com.sujin.posts.R
 import com.sujin.posts.databinding.ActivityPostsBinding
 import javax.inject.Inject
 
-class PostsActivity : BaseActivity<ActivityPostsBinding>(), PostsContract.View {
+class PostsActivity : BaseActivity<ActivityPostsBinding>(),
+    PostsContract.View {
 
     @Inject
     lateinit var postPresenter: PostsContract.Presenter

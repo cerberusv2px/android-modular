@@ -2,10 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sujin.comments">
 
-    <application
-        android:theme="@style/AppTheme"
-        >
-        <activity android:name=".CommentsActivity"></activity>
+    <application android:theme="@style/AppTheme">
+        <activity android:name=".ui.CommentsActivity"></activity>
     </application>
 
 </manifest>
