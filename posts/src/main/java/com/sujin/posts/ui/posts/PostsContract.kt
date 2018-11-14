@@ -8,5 +8,6 @@ interface PostsContract {
 
     interface Presenter {
         fun onButtonClick()
+        fun fetchPosts()
     }
 }

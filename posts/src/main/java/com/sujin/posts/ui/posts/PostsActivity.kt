@@ -26,6 +26,8 @@ class PostsActivity : BaseActivity<ActivityPostsBinding>(),
         binding.btnClick.setOnClickListener {
             postPresenter.onButtonClick()
         }
+
+        postPresenter.fetchPosts()
     }
 
     override fun buttonClick() {

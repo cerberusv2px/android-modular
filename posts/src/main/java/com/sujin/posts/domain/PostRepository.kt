@@ -1,6 +1,7 @@
 package com.sujin.posts.domain
 
 import com.sujin.disk.entity.PostDiskModel
+import com.sujin.posts.data.remote.Post
 import io.reactivex.Observable
 
 interface PostRepository {
@@ -11,6 +12,6 @@ interface PostRepository {
     }
 
     interface Remote {
-
+        fun fetchPosts(): Observable<List<Post>>
     }
 }

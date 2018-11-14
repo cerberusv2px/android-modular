@@ -2,13 +2,15 @@ package com.sujin.posts.domain
 
 import com.sujin.common.SchedulersFactory
 import com.sujin.disk.entity.PostDiskModel
+import com.sujin.posts.data.remote.Post
 import io.reactivex.Observable
 import javax.inject.Inject
 
 class PostRepositoryImpl @Inject constructor(
     private val schedulersFactory: SchedulersFactory,
-    private val postLocalRepo: PostRepository.Local
-) : PostRepository.Local {
+    private val postLocalRepo: PostRepository.Local,
+    private val postRemoteRepo: PostRepository.Remote
+) : PostRepository.Local, PostRepository.Remote {
 
     override fun getAllPost(): Observable<List<PostDiskModel>> {
         return postLocalRepo.getAllPost()
@@ -18,5 +20,11 @@ class PostRepositoryImpl @Inject constructor(
 
     override fun insert(postList: List<PostDiskModel>) {
         postLocalRepo.insert(postList)
+    }
+
+    override fun fetchPosts(): Observable<List<Post>> {
+        return postRemoteRepo.fetchPosts()
+            .subscribeOn(schedulersFactory.io())
+            .observeOn(schedulersFactory.ui())
     }
 }
