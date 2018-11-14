@@ -3,6 +3,7 @@ package com.sujin.common.di.module
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
+import com.sujin.common.di.scope.PerApplication
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -14,11 +15,11 @@ import retrofit2.converter.gson.GsonConverterFactory
 class ApiModule {
 
     @Provides
-    //@Singleton
+    @PerApplication
     fun provideGson(): Gson = GsonBuilder().setLenient().create()
 
     @Provides
-    //@Singleton
+    @PerApplication
     fun provideHttpLogginInterceptor(): HttpLoggingInterceptor {
         val logging = HttpLoggingInterceptor()
         logging.level = HttpLoggingInterceptor.Level.BODY
@@ -26,7 +27,7 @@ class ApiModule {
     }
 
     @Provides
-    //@Singleton
+    @PerApplication
     fun provideOkHttpClient(httpLoggingInterceptor: HttpLoggingInterceptor): OkHttpClient {
         return OkHttpClient.Builder()
             .apply {
@@ -36,7 +37,7 @@ class ApiModule {
     }
 
     @Provides
-   // @Singleton
+    @PerApplication
     fun provideApiService(
         okHttpClient: OkHttpClient,
         gson: Gson,
@@ -54,7 +55,7 @@ class ApiModule {
     }
 
     @Provides
-    //@Singleton
+    @PerApplication
     fun providesRxJavaCallAdapterFactory(): RxJava2CallAdapterFactory {
         return RxJava2CallAdapterFactory.create()
     }

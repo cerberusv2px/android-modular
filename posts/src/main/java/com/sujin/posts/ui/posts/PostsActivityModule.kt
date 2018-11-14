@@ -1,5 +1,6 @@
 package com.sujin.posts.ui.posts
 
+import com.sujin.common.di.scope.PerActivity
 import com.sujin.posts.domain.PostRepositoryImpl
 import dagger.Module
 import dagger.Provides
@@ -8,13 +9,13 @@ import dagger.Provides
 class PostsActivityModule {
 
     @Provides
-    //@PerActivity
+    @PerActivity
     fun providePostsView(activity: PostsActivity): PostsContract.View {
         return activity
     }
 
     @Provides
-    //@PerActivity
+    @PerActivity
     fun providePostsPresenter(
         view: PostsContract.View,
         postRepositoryImpl: PostRepositoryImpl

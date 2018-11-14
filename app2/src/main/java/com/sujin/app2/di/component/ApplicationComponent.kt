@@ -4,7 +4,7 @@ import android.app.Application
 import com.sujin.app2.TwoApplication
 import com.sujin.app2.di.module.ApplicationModule
 import com.sujin.app2.di.provider.ActivityBindingModule
-import com.sujin.app2.di.scope.PerApplication
+import com.sujin.common.di.scope.PerApplication
 
 import dagger.BindsInstance
 import dagger.Component

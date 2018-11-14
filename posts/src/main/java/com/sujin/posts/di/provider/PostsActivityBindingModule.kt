@@ -1,7 +1,6 @@
 package com.sujin.posts.di.provider
 
-
-import com.sujin.posts.di.scope.PerActivity
+import com.sujin.common.di.scope.PerActivity
 import com.sujin.posts.ui.posts.PostsActivity
 import com.sujin.posts.ui.posts.PostsActivityModule
 import dagger.Module

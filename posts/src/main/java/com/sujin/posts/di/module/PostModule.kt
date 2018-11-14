@@ -1,6 +1,8 @@
 package com.sujin.posts.di.module
 
 import com.sujin.common.SchedulersFactory
+import com.sujin.common.di.scope.PerApplication
+import com.sujin.common.di.scope.PerModule
 import com.sujin.disk.DatabaseManager
 import com.sujin.posts.data.local.PostLocalImpl
 import com.sujin.posts.data.remote.PostRemoteImpl
@@ -14,11 +16,13 @@ import dagger.Provides
 class PostModule {
 
     @Provides
+    @PerApplication
     fun providePostLocal(databaseManager: DatabaseManager): PostRepository.Local {
         return PostLocalImpl(databaseManager)
     }
 
     @Provides
+    @PerApplication
     fun providePostRepository(
         schedulersFactory: SchedulersFactory,
         postLocal: PostRepository.Local,
@@ -28,6 +32,7 @@ class PostModule {
     }
 
     @Provides
+    @PerApplication
     fun providePostRemote(postService: PostService): PostRepository.Remote {
         return PostRemoteImpl(postService)
     }

@@ -1,6 +1,7 @@
 package com.sujin.comments.ui
 
-import com.sujin.comments.di.scope.PerActivity
+
+import com.sujin.common.di.scope.PerActivity
 import dagger.Module
 import dagger.Provides
 
