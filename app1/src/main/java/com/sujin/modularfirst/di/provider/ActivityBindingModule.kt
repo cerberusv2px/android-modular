@@ -4,7 +4,8 @@ import com.sujin.comments.di.provider.CommentsActivityBindingModule
 import com.sujin.posts.di.provider.PostsActivityBindingModule
 import dagger.Module
 
-@Module(includes = [(PostsActivityBindingModule::class), (CommentsActivityBindingModule::class)])
+@Module(
+    includes = [(PostsActivityBindingModule::class), (CommentsActivityBindingModule::class)])
 abstract class ActivityBindingModule {
 
     // Sample

@@ -2,6 +2,7 @@ package com.sujin.modularfirst
 
 import android.app.Activity
 import android.app.Application
+import com.facebook.stetho.Stetho
 import com.sujin.modularfirst.di.component.DaggerApplicationComponent
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
@@ -20,6 +21,7 @@ class OneApplication : Application(), HasActivityInjector {
     override fun onCreate() {
         super.onCreate()
         initializeDaggerComponent()
+        initializeStetho()
     }
 
     private fun initializeDaggerComponent() {
@@ -27,5 +29,12 @@ class OneApplication : Application(), HasActivityInjector {
             .application(this)
             .build()
             .inject(this)
+    }
+
+    private fun initializeStetho() {
+        val builder = Stetho.newInitializerBuilder(this)
+        builder.enableWebKitInspector(Stetho.defaultInspectorModulesProvider(this))
+        builder.enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
+        Stetho.initialize(builder.build())
     }
 }

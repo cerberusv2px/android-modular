@@ -2,6 +2,7 @@ package com.sujin.posts.domain
 
 import com.sujin.common.SchedulersFactory
 import com.sujin.disk.entity.PostDiskModel
+import com.sujin.posts.data.mapper.PostMapper
 import com.sujin.posts.data.remote.Post
 import io.reactivex.Observable
 import javax.inject.Inject
@@ -24,6 +25,9 @@ class PostRepositoryImpl @Inject constructor(
 
     override fun fetchPosts(): Observable<List<Post>> {
         return postRemoteRepo.fetchPosts()
+            .doOnNext { posts ->
+                insert(posts.map { PostMapper.mapToLocal(it) })
+            }
             .subscribeOn(schedulersFactory.io())
             .observeOn(schedulersFactory.ui())
     }
