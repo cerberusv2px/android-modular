@@ -1,7 +1,7 @@
 package com.sujin.app2
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import com.sujin.comments.ui.CommentsActivity
 
 class MainActivity : AppCompatActivity() {

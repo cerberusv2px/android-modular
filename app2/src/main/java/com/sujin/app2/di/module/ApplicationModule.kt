@@ -2,12 +2,9 @@ package com.sujin.app2.di.module
 
 import android.app.Application
 import android.content.Context
+import com.sujin.app2.di.scope.PerApplication
 import dagger.Module
 import dagger.Provides
-import io.reactivex.Scheduler
-import com.sujin.app2.di.scope.PerApplication
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.schedulers.Schedulers
 
 @Module(
     includes = [
