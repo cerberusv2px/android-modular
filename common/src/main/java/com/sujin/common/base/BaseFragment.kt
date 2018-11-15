@@ -1,4 +1,4 @@
-package com.sujin.posts.base
+package com.sujin.common.base
 
 
 import android.content.Context

@@ -4,8 +4,8 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import com.sujin.comments.R
-import com.sujin.comments.base.BaseActivity
 import com.sujin.comments.databinding.ActivityCommentsBinding
+import com.sujin.common.base.BaseActivity
 import javax.inject.Inject
 
 class CommentsActivity : BaseActivity<ActivityCommentsBinding>(), CommentsContract.View {
