@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ModularFirst</string>
+    <string name="title_dynamic_feature">Dynamic Module</string>
 </resources>
