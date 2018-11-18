@@ -1,0 +1,49 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml:1:1-10:12
+INJECTED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml:1:1-10:12
+INJECTED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml:1:1-10:12
+INJECTED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml:1:1-10:12
+INJECTED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml:1:1-10:12
+INJECTED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml:1:1-10:12
+INJECTED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml:1:1-10:12
+	package
+		ADDED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml:3:5-40
+		INJECTED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml
+		INJECTED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml
+		ADDED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml:1:1-10:12
+		INJECTED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml
+	xmlns:dist
+		ADDED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml:2:5-61
+	android:versionCode
+		INJECTED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml
+		ADDED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml:1:1-10:12
+		INJECTED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml:1:11-69
+dist:module
+ADDED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml:5:5-9:19
+	dist:title
+		ADDED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml:7:9-51
+	dist:onDemand
+		ADDED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml:6:9-29
+dist:fusing
+ADDED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml:8:9-44
+	dist:include
+		ADDED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml:8:22-41
+uses-sdk
+INJECTED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml
+INJECTED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml
+INJECTED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml
+INJECTED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml
+		ADDED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml
+		INJECTED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml
+		ADDED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml
+		INJECTED from /Users/sujin.v2px/AndroidStudioProjects/ModularFirst/dynamic_feature/src/main/AndroidManifest.xml

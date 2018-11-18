@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    featureSplit="dynamic_feature"
+    package="com.sujin.modularfirst"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="28" />
+
+    <dist:module
+        dist:onDemand="true"
+        dist:title="@string/title_dynamic_feature" >
+        <dist:fusing dist:include="true" />
+    </dist:module>
+
+</manifest>
