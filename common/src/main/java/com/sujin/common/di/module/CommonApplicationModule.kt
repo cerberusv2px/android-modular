@@ -2,7 +2,7 @@ package com.sujin.common.di.module
 
 import android.app.Application
 import android.content.Context
-import com.sujin.common.SchedulersFactory
+import com.sujin.common.utils.SchedulersFactory
 import com.sujin.common.di.scope.PerApplication
 import com.sujin.disk.DatabaseManager
 import dagger.Module

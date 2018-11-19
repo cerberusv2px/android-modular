@@ -1,6 +1,6 @@
 package com.sujin.posts.domain
 
-import com.sujin.common.SchedulersFactory
+import com.sujin.common.utils.SchedulersFactory
 import com.sujin.disk.entity.PostDiskModel
 import com.sujin.posts.data.mapper.PostMapper
 import com.sujin.posts.data.remote.Post
