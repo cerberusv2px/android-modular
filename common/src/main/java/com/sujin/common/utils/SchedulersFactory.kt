@@ -1,4 +1,4 @@
-package com.sujin.common
+package com.sujin.common.utils
 
 import io.reactivex.Scheduler
 

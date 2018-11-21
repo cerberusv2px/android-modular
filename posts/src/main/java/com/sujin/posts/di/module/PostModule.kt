@@ -1,8 +1,7 @@
 package com.sujin.posts.di.module
 
-import com.sujin.common.SchedulersFactory
+import com.sujin.common.utils.SchedulersFactory
 import com.sujin.common.di.scope.PerApplication
-import com.sujin.common.di.scope.PerModule
 import com.sujin.disk.DatabaseManager
 import com.sujin.posts.data.local.PostLocalImpl
 import com.sujin.posts.data.remote.PostRemoteImpl
