@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.sujin.posts">
+          package="np.com.subratgyawali.login">
 
     <application android:theme="@style/AppTheme">
-        <activity android:name=".ui.posts.PostsActivity"/>
+        <activity
+                android:name=".LoginActivity"
+                android:label="@string/app_name"/>
     </application>
 
 </manifest>

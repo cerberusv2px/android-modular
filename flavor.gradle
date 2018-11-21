@@ -1,0 +1,64 @@
+android {
+    flavorDimensions "default"
+
+    productFlavors {
+        one {
+            dimension "default"
+            applicationIdSuffix = ".one"
+            def versionMajor = 3
+            def versionMinor = 8
+            def versionPatch = 7
+            versionCode versionMajor * 10000 + versionMinor * 100 + versionPatch
+            versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+            ext {
+                server = [debug   : "https://debug/",
+                          release : "https://release/",
+                          qaserver: "https://qa/"
+                ]
+            }
+        }
+
+        two {
+            dimension "default"
+            applicationIdSuffix = ".two"
+            def versionMajor = 3
+            def versionMinor = 8
+            def versionPatch = 2
+            versionCode versionMajor * 10000 + versionMinor * 100 + versionPatch
+            versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+            ext {
+                server = [debug   : "https://debug/",
+                          release : "https://release/",
+                          qaserver: "https://qa/"
+                ]
+            }
+        }
+
+        three {
+
+            dimension "default"
+            applicationIdSuffix = ".three"
+            def versionMajor = 3
+            def versionMinor = 8
+            def versionPatch = 3
+            versionCode versionMajor * 10000 + versionMinor * 100 + versionPatch
+            versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+            ext {
+                server = [debug   : "https://debug/",
+                          release : "https://release/",
+                          qaserver: "https://qa/"
+                ]
+            }
+        }
+
+    }
+
+    applicationVariants.all { variant ->
+        def flavor = variant.productFlavors[0]
+        println "Setting up server URL ${flavor.ext.server[variant.buildType.name]} for variant [${variant.name}]"
+        variant.buildConfigField "String", "SERVER_URL", "\"${flavor.ext.server[variant.buildType.name]}\""
+        variant.outputs.all {
+            outputFileName = "${project.name}-${flavor.name}-${variant.buildType.name}-${variant.versionCode}.apk"
+        }
+    }
+}
