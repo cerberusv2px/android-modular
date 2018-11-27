@@ -1,5 +1,6 @@
 package com.sujin.common.di.module
 
+import com.apollographql.apollo.ApolloClient
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
@@ -58,5 +59,14 @@ class ApiModule {
     @PerApplication
     fun providesRxJavaCallAdapterFactory(): RxJava2CallAdapterFactory {
         return RxJava2CallAdapterFactory.create()
+    }
+
+    @Provides
+    @PerApplication
+    fun provideApolloClient(okHttpClient: OkHttpClient): ApolloClient {
+        return ApolloClient.builder()
+            .serverUrl("http://10.168.2.104:4000/graphql")
+            .okHttpClient(okHttpClient)
+            .build()
     }
 }

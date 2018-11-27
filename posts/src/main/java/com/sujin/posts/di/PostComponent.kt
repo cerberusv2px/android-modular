@@ -19,7 +19,7 @@ interface PostComponent {
     @Subcomponent.Builder
     interface Builder {
         @BindsInstance
-        fun application(application: Application): Builder
+        fun postApplication(application: Application): Builder
 
         fun build(): PostComponent
     }

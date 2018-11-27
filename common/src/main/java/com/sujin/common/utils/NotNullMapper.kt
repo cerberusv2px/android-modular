@@ -4,6 +4,7 @@ import com.sujin.common.exception.FailedResponseException
 import io.reactivex.Observable
 import io.reactivex.annotations.NonNull
 import io.reactivex.functions.Function
+/*
 
 class NotNullMapper<T> : Function<BaseResponse<T>, Observable<T>> {
     @Throws(Exception::class)
@@ -23,4 +24,4 @@ class NotNullMapper<T> : Function<BaseResponse<T>, Observable<T>> {
         else
             Observable.just(item)
     }
-}
+}*/

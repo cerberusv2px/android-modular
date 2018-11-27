@@ -2,7 +2,9 @@ package com.sujin.posts.domain
 
 import com.sujin.common.utils.SchedulersFactory
 import com.sujin.disk.entity.PostDiskModel
+import com.sujin.posts.CourseBuilderQuery
 import com.sujin.posts.data.mapper.PostMapper
+import com.sujin.posts.data.remote.CourseRemoteModel
 import com.sujin.posts.data.remote.Post
 import io.reactivex.Observable
 import javax.inject.Inject
@@ -28,6 +30,12 @@ class PostRepositoryImpl @Inject constructor(
             .doOnNext { posts ->
                 insert(posts.map { PostMapper.mapToLocal(it) })
             }
+            .subscribeOn(schedulersFactory.io())
+            .observeOn(schedulersFactory.ui())
+    }
+
+    override fun getApolloData(): Observable<CourseRemoteModel> {
+        return postRemoteRepo.getApolloData()
             .subscribeOn(schedulersFactory.io())
             .observeOn(schedulersFactory.ui())
     }

@@ -18,7 +18,7 @@ class PostsPresenter @Inject constructor(
     }
 
     override fun fetchPosts() {
-        disposables.add(postRepositoryImpl.fetchPosts()
+        /*disposables.add(postRepositoryImpl.fetchPosts()
             .subscribe({
                 print(it)
             }, {
@@ -26,6 +26,15 @@ class PostsPresenter @Inject constructor(
             }, {
 
             })
+        )*/
+
+        disposables.add(
+            postRepositoryImpl.getApolloData()
+                .subscribe({
+                    println("Size: ${it.courses.size}")
+                }, {
+                    println(it)
+                })
         )
     }
 }

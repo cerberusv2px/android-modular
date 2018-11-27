@@ -2,6 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'com.apollographql.android'
 
 android {
     compileSdkVersion 28
@@ -53,6 +54,8 @@ dependencies {
     kapt "com.google.dagger:dagger-android-processor:2.16"
     kapt "com.google.dagger:dagger-compiler:2.16"
 
+    implementation 'com.apollographql.apollo:apollo-runtime:1.0.0-alpha3'
+    implementation "com.apollographql.apollo:apollo-android-support:1.0.0-alpha3"
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'

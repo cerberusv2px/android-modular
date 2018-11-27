@@ -1,5 +1,7 @@
 package com.sujin.posts.di.module
 
+import com.apollographql.apollo.ApolloClient
+import com.google.gson.Gson
 import com.sujin.common.utils.SchedulersFactory
 import com.sujin.common.di.scope.PerApplication
 import com.sujin.disk.DatabaseManager
@@ -32,7 +34,7 @@ class PostModule {
 
     @Provides
     @PerApplication
-    fun providePostRemote(postService: PostService): PostRepository.Remote {
-        return PostRemoteImpl(postService)
+    fun providePostRemote(postService: PostService, apolloClient: ApolloClient, gson: Gson): PostRepository.Remote {
+        return PostRemoteImpl(postService, apolloClient, gson)
     }
 }
